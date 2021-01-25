@@ -38,14 +38,15 @@ Interoperability is a must; the code must be lightweight, portable and workable 
 - Miniaturization is to be a goal in design (i.g. an ESP12 controller and associated circuitry should be able to be easily inserted into a preexisting wall or light socket)
 
 Stability is a big factor; should the ESP12/ESP32 lose power or stop providing a signal, the end device should be able to either return to a safe default state *or* maintain its last state.
-
-
-
-
+  
+  
+  
+  
+  
 ##### Protocol
 The protocol being used is based on JSON objects; this is rather computationally expensive and may be changed in future.  
 Assume this is a message being sent to a specific node in the mesh:  
-  { "target":"BedRoom2",
+  ``{ "target":"BedRoom2",
     "type":1.
     "msg":{
         "light1":0,
@@ -53,6 +54,6 @@ Assume this is a message being sent to a specific node in the mesh:
         "light3":4,
         "fan":1
         }
-   }
+   }``
 This message is being sent from a bridge to a specific node. The target node's ID/name is included in the message (in addition to being checked through the painlessMesh library) for the purposes of ensuring a node only executes commands sent specifically to it. The message type is '1', meaning it is command (a confirmation of a command would have a type of 2, a status request would be type 3, a status report would be type 4, and anything 5 or above is an error code). The 'msg' contents is an array of values; here it instructs the 'BedRoom2' node to set the value of 'light1' to 0 (off or LOW), set 'light2' to 1 (on or HIGH), set 'light3' to 4 ('light3' here being an RGB strip - the command is to set it to the fourth preprogrammed pattern and a number is used to shorten the overall message length; a more complicated command to specific a specific colour, delay, framerate, pattern, etc, would be sent as a string), and lastly, 'fan' is set to 1.  
 After receiving this message, 'BedRoom2' node would effect the changes and respond with an acknowledgement message (type 2) sending back the status of all of its associated devices to confirm sucessful operation. 
