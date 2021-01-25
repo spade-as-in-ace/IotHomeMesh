@@ -46,6 +46,7 @@ Stability is a big factor; should the ESP12/ESP32 lose power or stop providing a
 ##### Protocol
 The protocol being used is based on JSON objects; this is rather computationally expensive and may be changed in future.  
 Assume this is a message being sent to a specific node in the mesh:  
+
 ``    { "target":"BedRoom2",  
         "type":1.  
         "msg":{  
