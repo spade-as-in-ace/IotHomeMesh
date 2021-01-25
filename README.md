@@ -63,4 +63,4 @@ After receiving this message, 'BedRoom2' node would effect the changes and respo
   
 ##### Depedencies
 This makes use of the painlessMesh library. Find the painlessMesh library [here](https://gitlab.com/painlessMesh/painlessMesh).   
-As such, some of the libraries included in painlessMesh, namely the ArduinoJSON library, will also be used directly.
+As such, some of the libraries included in painlessMesh, namely the ArduinoJSON and TaskScheduler libraries, will also be used directly.
