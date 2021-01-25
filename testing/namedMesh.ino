@@ -4,7 +4,7 @@
 #define MESH_SSID       "IoTMesh"
 #define MESH_PASSWORD   "temp"
 #define MESH_PORT        5555
-String NODE_NAME = "RoomCeiling";
+String NODE_NAME = "BedRoom2";
 Scheduler  mainScheduler;
 namedMesh  mesh;
 bool debug = true;
