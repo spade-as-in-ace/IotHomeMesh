@@ -4,10 +4,11 @@
 #define MESH_SSID       "IoTMesh"
 #define MESH_PASSWORD   "temp"
 #define MESH_PORT        5555
-String NODE_NAME = "BedRoom2";
+String NODE_NAME = "ExampleLights";
 Scheduler  mainScheduler;
 namedMesh  mesh;
 bool debug = true;
+// For later use - accept incoming commands only from the server
 String privilegedNodes[] = { "server" };
 
 #if defined(FASTLED_VERSION) && (FASTLED_VERSION < 3001000)
