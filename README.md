@@ -2,7 +2,7 @@
 ### ESP12/ESP32 IoT Mesh Network  
   
 The goal of this project is to implement a relatively straightforward plug-and-play IoT system that is also extensible.  
-The ideal final product would be one that could be fitted into any house regardless of type or construction
+The ideal final product would be one that could be fitted into any house regardless of type or construction with no repercussions.
 
 #### Current Target  
 
