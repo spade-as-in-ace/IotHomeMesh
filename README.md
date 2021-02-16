@@ -12,8 +12,8 @@ In future, the role of the ESP12 sending commands should be played by a SBC (Ras
 
 ##### To Do:  
 ##### Programming:  
-- Get communication between two ESP12s (NodeMCUs) working
-- Program RGB patterns on the 'device' ESP12
+- Get communication between two ESP12s (NodeMCUs) working (done)
+- Program RGB patterns on the 'device' ESP12  (done)
 - Program serial input on the 'bridge' ESP12
 - Develop protocol
     - Protocol must must strings (due to the nature of the TCP connections used in the painlessMesh library
